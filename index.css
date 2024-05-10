@@ -1,11 +1,17 @@
+
+body{
+    margin: 0;
+    font-size: 16px;
+}
 /* the header */
 header {
     width: 100%;
-    height: 161px;
+    height: 61px;
    display: flex;
    justify-content: space-between;
    padding: 6px;
    align-items: center;
+   border-bottom:2px solid #EC605D;
 
 
 }
@@ -40,8 +46,8 @@ header button {
 .flexD{
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     
-    flex-direction: row;
 }
   .line{
     border: 3px solid #EC605D;
@@ -50,12 +56,11 @@ header button {
     border-radius: 3px;
   }
 .hero{
-    display: flex;
-    max-width: 1201px;
-    max-width: 629px;
-    position: relative;
-    left: 400px;
-
+margin-top: 50px;  
+display: flex;
+align-items: center;
+justify-content: center;
+   
 
 }
 .hero button{
@@ -80,11 +85,21 @@ header button {
     color: #EC605D;
 }
 .first-food {
+    display: flex;
+    align-items: center;
     max-width: 309px;
-    max-width: 273px;
+   
     float: right;
 
     
+}
+
+.hero-text{
+    max-width: 629px;
+  
+    padding: 40px;
+   
+
 }
 .first-food img {
     width: 100%;
@@ -100,7 +115,9 @@ header button {
     display: flex;
     flex-direction: column;
     align-items:center ;
-   
+    flex-wrap: wrap;
+    
+     
 }
 .Menu-head{
     text-align: center;
@@ -110,25 +127,14 @@ header button {
 }
 .best{
     display: grid;
-    grid-template-columns: repeat(3, 360px);
-    gap: 30px;
-    
-
+    grid-template-columns: repeat(4, minmax(100px, 250px));
+    gap: 10px;
+   
 }
-.one{
-    position: relative;
-    top: 200px;
 
-}
-.two{
-    position: relative;
-    top: 100px;
-
-}
 
 .best-img{
-   
-    height: 205px;
+   height: 128px;
 }
 .best-img img{
     width: 100%;
@@ -137,12 +143,15 @@ header button {
 .best-item{
     margin-top: 30px;
     border: 2px solid rgba(0,0,0,0.3);
-    max-height: 585px;
+ 
+ 
 }
 
 .best-choice{
     display: flex;
     justify-content: space-between;
+    height: 10px;
+    margin-top: 9px;
 }
 .choice1{
     display: flex;
@@ -153,8 +162,8 @@ header button {
     margin-left: 3px;
 }
 .kepper{
-    margin: 30px;
-    margin-top: 10px;
+    margin: 5px;
+   
 }
 .kepper button{
     margin-right: 10px;
@@ -187,12 +196,13 @@ header button {
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .service-items{
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(3, 263px);
+    grid-template-columns: repeat(3, 213px);
     grid-gap: 30px;
 }
 
@@ -219,9 +229,9 @@ header button {
 .service-item{
     border-radius: 10px;
     border: 1px solid rgba(0,0,0,0.3);
-    max-height: 453px;
-    line-height: 30px;
-    padding: 30px;
+   height: auto;
+
+    padding: 10px;
 }
 
 .service-item button{
@@ -257,31 +267,34 @@ header button {
     color: #EC605D;
 }
 
-.s1{
-    position: relative;
-    top:60px;
-}
+
 
 /*Forth secton*/ 
 
 .About{
     margin-top: 300px;
-    display: grid;
-    grid-template-columns: repeat(2,1fr );
-    grid-gap: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   margin-bottom: 50px;
+   padding: 50px;
     
+}
+
+.About h3{
+    color: #EC605D;
+}
+
+.theImg, .aboutplus{
+    max-width: 545px;
+   
+}
+
+.aboutplus{
+    margin-left: 100px;
 }
 .theImg img{
 width: 100%;
-}
-
-.About div{
-    
-    max-width: 500px;
-  
-}
-.theImg div {
-    max-width:100% ;
 }
 
 .aboutplus button{
@@ -300,24 +313,22 @@ width: 100%;
 
 /*fifth section*/
 .Testimonial{
+    width:100%;
     display: grid;
     grid-template-columns: 1fr 3fr;
-    margin-top: 40px;
-    left: 0;
-    margin: 0;
-    width: 100%;
+    place-items:center;
     background: linear-gradient(#FFEDED, #FFEEED);
 
 }
 .people {
     display: grid;
-    grid-template-columns: repeat(3, 269px);
+    grid-template-columns: repeat(3, 200px);
     grid-gap: 50px;
 }
 
 .fieldimage{
-    width: 148px;
-    height: 148px;
+    width: 78px;
+    height:68px;
  
 
 }
@@ -337,10 +348,9 @@ legend{
 }
 fieldset{
     margin-top: 20px;
-    
-    padding-left: 10px;
+    height: auto;
+    padding-left: 7px;
     border-radius: 10px;
-    line-height: 30px;
     background-color: white;
 }
 
@@ -389,6 +399,7 @@ font-size: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-top: 70px;
    padding:20px;
 }
@@ -419,3 +430,139 @@ font-size: 30px;
     font-size: small;
     color: white;
     border: 0 transparent; }
+
+
+
+    /* Media querys */
+
+    @media (max-width:1087px) and (min-width:600px) {
+          nav{
+            display: none;
+          }
+          .About{
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            justify-content: center;
+          }
+          .theImg{
+            border-bottom: 3px solid #EC605D;
+          }
+          .aboutplus{
+            margin: 30px;
+            box-shadow: 0 0 10px 4px rgba(0,0,0,0.5);
+            padding: 39px;
+            padding-bottom: 39px;  
+        }
+        .best{
+            display: grid;
+            grid-template-columns: repeat(2, minmax(100px, 250px));
+            gap: 30px;
+
+        
+        }
+        .hero{
+            font-size: calc(1.3em + 5px);
+        }
+        .Testimonial{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+
+        }
+
+        header button{
+            width: auto;
+          }
+    }
+
+
+    @media (max-width:780px) {
+   
+        header{
+            width: 100%;
+            
+        }
+        .Testimonial{
+             width: 100%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            
+
+        }
+        .people {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        fieldset{
+            max-width: 250px;
+            height: auto;
+        }
+
+        nav{
+            display: none;
+        }
+        .best{
+            display: flex;
+            flex-direction: column;
+             align-items: center;
+             justify-content: center;
+            width: 100%;
+        }
+        .best-item{
+            max-width: 250px;
+            height: auto;
+        }
+        .service-items{
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .service-item{
+         
+            max-width: 250px;
+            height: auto;
+        }
+
+        .hero{
+            font-size: calc(1.2em - 4px);
+        }
+    
+    .About{
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+      justify-content: center;
+      align-items: center;
+    
+
+    }
+    .Service h1{
+        font-size: 20px;
+    }
+    .theImg{
+      border-bottom: 3px solid #EC605D;
+    }
+    .aboutplus{
+      margin: 30px;
+      box-shadow: 0 0 10px 4px rgba(0,0,0,0.5);
+     padding: 40px;  
+      height: auto;
+  }
+  header button{
+    width: auto;
+  }
+  header h1{
+    font-size: 20px;
+  }
+ 
+
+    }
